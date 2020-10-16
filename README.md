@@ -1,5 +1,5 @@
 # dies-destribution
->This is a program to solve the destribution of the material of the dies. The goal is Because during destribution, there are always some batch left a little. When the next device choose which device should be used, the left batched will be picked up because of some rule. Therefore, the schedule of the device will become fragmental. The effect will reflected on the production line. In order to solve this problem, the dynamic program is applied to this program. After using DP to choose the batch appropriately, the final inventory will have the least left batches and the schedule will become most appropriate.
+>This is a program to solve the destribution of the material of the dies. The job is used to finish by employees. The employee need to trace a lot of different rule and choose appropriate batch in inventory. This is only regualr process for one device. If there is lot of device, it will be quite time-consuming. The goal is reduce the human resources and improve the effective on using the batch. Because during destribution, there are always some batch left a little. When the next device choose which device should be used, the left batched will be picked up because of some rule. Therefore, the schedule of the device will become fragmental. The effect will reflected on the production line. In order to solve this problem, the dynamic program is applied to this program. After using DP to choose the batch appropriately, the final inventory will have the least left batches and the schedule will become most appropriate.
 >In this program, there are several files. Each has it own function to deal with different part.
 
 * DeviceSetting.py
@@ -33,4 +33,17 @@
 > This is use to exclude the batch from inventory which has the eng flag.
 
 * SplitSchedule.py
->
+> This is used to split the schedule after destribution. The factory will use the scheduel to produce the device. How much to produce and which batch should be taken will be recoded in the schedule. 
+
+* SplitWaferID.py
+> The wafer ID is usuallt a serial number. This is used to saperate the two-digits number from the serial number.
+
+* demandBuildPlan.py
+> This is used to formatted the demand build plan.
+
+* main.py
+> This is the entry of the program.
+
+* orcl_connect.py
+> This is uesd to build the connection to the oracle data base. There are several function to get the specific rule from the DB.
+
