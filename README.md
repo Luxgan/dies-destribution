@@ -3,4 +3,7 @@
 >In this program, there are several files. Each has it own function to deal with different part.
 
 * DeviceSetting.py
-> This.
+> This is used to read the material of device corresponded to the batch.
+
+* DieRelease.py
+> This is used to read the rules about the number of limit that when the usage of the batch or wafer is over the limit, the batch or wafer should be destributed all.
